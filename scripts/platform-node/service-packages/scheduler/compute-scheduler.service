@@ -1,0 +1,14 @@
+[Unit]
+Description=Compute global scheduler
+
+[Service]
+Type=simple
+UMask=0077
+Environment=COMPUTE_SCHEDULER_CONFIG=%h/.config/compute-scheduler/scheduler.json
+EnvironmentFile=-%h/.config/compute-scheduler/service.env
+ExecStart=%h/.local/lib/compute-scheduler/compute-scheduler serve ${COMPUTE_SCHEDULER_CONFIG}
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,19 @@
+[Unit]
+Description=Compute GPU node scheduler connection
+Requires=compute-node.service
+After=compute-node.service
+PartOf=compute-node.service
+
+[Service]
+Type=simple
+UMask=0077
+Environment=XDG_CONFIG_HOME=%h/.config/compute-node-service
+Environment=COMPUTE_NODE_DATA_DIR=%h/.local/state/compute-node
+Environment=COMPUTE_NODE_LINK_CONFIG=%h/.config/compute-node-service/node.json
+EnvironmentFile=-%h/.config/compute-node-service/service.env
+ExecStart=%h/.local/lib/compute-node/compute-node connect ${COMPUTE_NODE_LINK_CONFIG} --data-dir ${COMPUTE_NODE_DATA_DIR}
+Restart=on-failure
+RestartSec=3s
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,35 @@
+[workspace]
+members = [
+    "apps/compute-scheduler",
+    "apps/compute-node",
+    "crates/hardware-probe",
+    "crates/platform-node-link",
+]
+resolver = "2"
+
+[profile.dev]
+codegen-units = 64
+debug = 1
+incremental = true
+
+[profile.dev.package."*"]
+debug = 0
+
+# Hashing multi-GB model files must not use the debug compression loop.
+# Keep application code debuggable while retaining full integrity verification.
+[profile.dev.package.sha2]
+opt-level = 3
+
+[profile.test]
+codegen-units = 64
+debug = 1
+
+[profile.test.package."*"]
+debug = 0
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

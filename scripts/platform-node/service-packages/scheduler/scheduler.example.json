@@ -1,0 +1,16 @@
+{
+  "state_dir": "/home/compute/.local/state/compute-scheduler",
+  "remote": {
+    "listen": "127.0.0.1:8743",
+    "ca_certificate": "/home/compute/.config/compute-scheduler/pki/ca.pem",
+    "certificate": "/home/compute/.config/compute-scheduler/pki/scheduler.pem",
+    "private_key": "/home/compute/.config/compute-scheduler/pki/scheduler.key",
+    "nodes": [
+      {
+        "id": "gpu-1",
+        "certificate": "/home/compute/.config/compute-scheduler/pki/gpu-1.pem",
+        "plans": ["qwen06-auto"]
+      }
+    ]
+  }
+}

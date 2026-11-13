@@ -1,0 +1,8 @@
+{
+  "node_id": "gpu-1",
+  "scheduler": "127.0.0.1:8743",
+  "server_name": "compute-scheduler.test",
+  "ca_certificate": "/home/compute/.config/compute-node-service/pki/ca.pem",
+  "certificate": "/home/compute/.config/compute-node-service/pki/gpu-1.pem",
+  "private_key": "/home/compute/.config/compute-node-service/pki/gpu-1.key"
+}

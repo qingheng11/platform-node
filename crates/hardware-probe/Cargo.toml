@@ -1,0 +1,18 @@
+[package]
+name = "hardware-probe"
+version = "0.1.0"
+description = "Reusable local hardware discovery for Platform Node clients"
+edition = "2021"
+license = "UNLICENSED"
+publish = false
+
+[dependencies]
+nvml-wrapper = "0.12"
+raw-cpuid = "11.6"
+serde = { version = "1", features = ["derive"] }
+sysinfo = "0.39"
+thiserror = "2"
+
+[dev-dependencies]
+serde_json = "1"
+tempfile = "3"

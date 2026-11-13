@@ -1,0 +1,17 @@
+/target/
+/dist/
+__pycache__/
+*.pyc
+*.env
+*.pem
+*.key
+*.csr
+*.der
+*.sock
+*.db
+*.sqlite*
+*.log
+*.gguf
+*.safetensors
+*.zip
+*.tar.gz
