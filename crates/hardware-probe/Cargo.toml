@@ -3,7 +3,7 @@ name = "hardware-probe"
 version = "0.1.0"
 description = "Reusable local hardware discovery for Platform Node clients"
 edition = "2021"
-license = "UNLICENSED"
+license = "MIT"
 publish = false
 
 [dependencies]

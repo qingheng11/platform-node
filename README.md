@@ -43,6 +43,6 @@ compute-node status
 compute-node gpu list
 ```
 
-## License status
+## License
 
-The extracted source currently carries no open-source license. Redistribution and licensing require permission from the applicable rights holders.
+Licensed under the [MIT License](LICENSE).

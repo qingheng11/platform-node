@@ -3,7 +3,7 @@ name = "compute-node"
 version = "0.1.0"
 edition = "2021"
 description = "Compute platform compute node"
-license = "UNLICENSED"
+license = "MIT"
 publish = false
 
 [[bin]]

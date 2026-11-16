@@ -3,7 +3,7 @@ name = "compute-scheduler"
 version = "0.1.0"
 edition = "2021"
 description = "Compute platform compute scheduler"
-license = "UNLICENSED"
+license = "MIT"
 publish = false
 
 [target.'cfg(all(target_os = "linux", target_arch = "x86_64"))'.dependencies]
